@@ -20,6 +20,10 @@ A professional, production-ready C++ library for Arduino (ATmega328P) that drive
   - 220Ω–470Ω in series with each segment (8 total)
   - 1kΩ–10kΩ base resistors for digit transistors (4 total)
 
+## Schematics
+
+- **[Download Direct Drive Schematic (PDF)](extras/direct_drive_schematic.pdf)**
+
 ### Pinout Example
 
 ```
@@ -276,7 +280,7 @@ See the `examples/` folder for complete sketches:
 ### Display flickers
 
 - Check for loose wiring
-- Verify power supply is stable (add 100µF capacitor across display)
+- Verify power supply is stable
 
 ### Some segments don't light
 
