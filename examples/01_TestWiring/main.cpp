@@ -2,7 +2,7 @@
  * Example: 01_TestWiring
  *
  * Runs a blocking diagnostic test to verify correct wiring of the 7-segment display.
- * 
+ *
  * This sketch illuminates segments sequentially (a-g, then dp) on all four digits
  * simultaneously. Use this to:
  * - Verify all segments light up
@@ -28,7 +28,7 @@
 
 // ========== PIN CONFIGURATION ==========
 // Define pins in PROGMEM (saves RAM on small microcontrollers)
-const uint8_t digitPins[] PROGMEM = {10, 11, 12, 13};     // Digit control pins
+const uint8_t digitPins[] PROGMEM = {10, 11, 12, 13};           // Digit control pins
 const uint8_t segmentPins[] PROGMEM = {2, 3, 4, 5, 6, 7, 8, 9}; // Segment a-g, dp
 
 // ========== DISPLAY INSTANCE ==========
@@ -38,7 +38,7 @@ SevenSegment display(segmentPins, digitPins);
 void setup() {
   Serial.begin(9600);
   delay(500); // Wait for Serial to stabilize
-  
+
   Serial.println("\n========================================");
   Serial.println("   SSFD: 7-Segment Wiring Test");
   Serial.println("========================================\n");
@@ -46,14 +46,15 @@ void setup() {
   // Initialize display with error checking
   SevenSegment::Error err = display.begin();
   if (err != SevenSegment::Error::OK) {
-    Serial.print("❌ ERROR: Display initialization failed (code ");
+    Serial.print("ERROR: Display initialization failed (code ");
     Serial.print((uint8_t)err);
     Serial.println(")");
     Serial.println("   Check pin assignments and power supply");
-    while (1); // Halt on initialization failure
+    while (1)
+      ; // Halt on initialization failure
   }
 
-  Serial.println("✓ Display initialized successfully\n");
+  Serial.println("Display initialized successfully\n");
   Serial.println("Starting wiring diagnostic...");
   Serial.println("Each segment will light for 1 second.\n");
 
@@ -61,7 +62,7 @@ void setup() {
   // This illuminates each segment sequentially (a-g, then dp)
   display.testWiring(1000); // 1000 ms = 1 second per segment
 
-  Serial.println("\n✓ Wiring test complete!");
+  Serial.println("\n Wiring test complete!");
   Serial.println("\nInterpret results:");
   Serial.println("  • All segments lit? → Wiring is correct");
   Serial.println("  • Some segments dark? → Check that GPIO pin");
