@@ -1,0 +1,50 @@
+#######################################
+# Syntax Highlighting for SSFD Library
+#######################################
+
+# Classes
+SevenSegment	KEYWORD1
+
+# Constants
+NUM_DIGITS	LITERAL1
+NUM_SEGMENTS	LITERAL1
+MAX_PIN	LITERAL1
+MAX_VALUE	LITERAL1
+MAX_FLOAT	LITERAL1
+
+# Enums
+Error	KEYWORD1
+OK	LITERAL1
+NULL_POINTER	LITERAL1
+INVALID_PIN	LITERAL1
+TIMER_INIT_FAILED	LITERAL1
+NOT_INITIALIZED	LITERAL1
+INVALID_ARGUMENT	LITERAL1
+
+# Core Methods
+begin	KEYWORD2
+end	KEYWORD2
+refresh	KEYWORD2
+clear	KEYWORD2
+testWiring	KEYWORD2
+isInitialized	KEYWORD2
+getLastError	KEYWORD2
+multiplex	KEYWORD2
+
+# Display Data Functions
+setNumber	KEYWORD2
+setFloat	KEYWORD2
+setText	KEYWORD2
+setSegments	KEYWORD2
+setHundredths	KEYWORD2
+
+# Display Modes
+setLeadingZeros	KEYWORD2
+setRefreshInterval	KEYWORD2
+startBlink	KEYWORD2
+stopBlink	KEYWORD2
+isBlinking	KEYWORD2
+
+# Helper Methods
+getPattern	KEYWORD2
+isPinValid	KEYWORD2
