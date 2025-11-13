@@ -69,12 +69,12 @@ void setup()
     SevenSegment::Error err = display.begin();
     if (err != SevenSegment::Error::OK)
     {
-        Serial.println("❌ Display init failed!");
+        Serial.println("Display init failed!");
         while (1)
             ;
     }
 
-    Serial.println("✓ Display initialized\n");
+    Serial.println("Display initialized\n");
     Serial.println("Running demo mode...\n");
 
     display.setLeadingZeros(false);
@@ -148,7 +148,7 @@ void runDemoMode(unsigned long now)
 
         case 4:
             Serial.println("Demo Step 5: Number with decimal at position 0");
-            display.setNumber(5678, 0); // "5.678"
+            display.setNumber(5678, 0);
             break;
 
         case 5:
