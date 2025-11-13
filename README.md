@@ -6,7 +6,7 @@ A professional, production-ready C++ library for Arduino (ATmega328P) that drive
 
 ✅ **Non-blocking** — Display refresh runs in Timer1 ISR; your code stays 100% responsive  
 ✅ **Robust** — Full input validation, bounds checking, and error codes  
-✅ **Efficient** — Uses PROGMEM for lookup tables; ~80 Hz multiplexing for crisp display  
+✅ **Efficient** — Uses PROGMEM for lookup tables; ~125 Hz multiplexing for crisp display  
 ✅ **Flexible** — Display integers, floats, text, or custom 7-segment patterns  
 ✅ **Safe** — Volatile guards, atomic writes, graceful failure modes  
 ✅ **Well-documented** — Doxygen-ready headers, examples, and inline comments
